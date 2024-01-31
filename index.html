@@ -67,5 +67,17 @@
             </tr>
             </table>
 
+            <hr>
+            <h4>Code of Snippet</h4>
+            The function 'defer' accepts a function 'fn' along with an arbitrary number of additional arguments ('...args').Next, the input 'a' is used to schedule the execution of 'console.log('a')' using the 'defer' function. It also starts 'console.log('b')' right away.'console.log('b')' is run right away.
+            'defer(console.log, 'a')' uses'setTimeout' to arrange the execution of 'console.log('a')'.
+            <pre>
+                const defer = (fn, ...args) => setTimeout(fn, 1, ...args);
+
+                defer(console.log, 'a'), console.log('b'); // logs 'b' then 'a'
+            </pre>
+            <a href="https://code.pieces.app/collections/javascript">link of snippet</a>
+
+
 </body>
 </html>
